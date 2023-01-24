@@ -130,10 +130,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cotizacion.cpp" />
+    <ClCompile Include="CotizacionPrenda.cpp" />
     <ClCompile Include="cotizador.cpp" />
+    <ClCompile Include="Prenda.cpp" />
     <ClCompile Include="Vendedor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cotizacion.h" />
+    <ClInclude Include="CotizacionPrenda.h" />
+    <ClInclude Include="Prenda.h" />
     <ClInclude Include="Vendedor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
