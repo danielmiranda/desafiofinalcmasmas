@@ -1,13 +1,13 @@
 #pragma once
-#include "Prenda.h"
+#include "IPrenda.h"
 
 class CotizacionPrenda
 {
 public: 
-	Prenda *prendaCodigo;
+	IPrenda *prendaCodigo;
 	int cantidad;
 	float subtotal;
-	CotizacionPrenda(Prenda *prenda, int cantidad);
+	CotizacionPrenda(IPrenda *prenda, int cantidad);
 
 };
 

@@ -9,6 +9,9 @@ class Tienda
 public:
 	string obtenerNombre();
 	string obtenerDireccion();
+	string toString();
+
+	Tienda();
 	Tienda(string nombre, string direccion);
 
 private:

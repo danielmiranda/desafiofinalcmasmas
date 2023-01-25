@@ -1,6 +1,6 @@
 #include "Stock.h"
 
-Stock::Stock(Tienda *tienda, Prenda *prenda, int cantidad) {
+Stock::Stock(Tienda *tienda, IPrenda *prenda, int cantidad) {
 	this->cantidad = cantidad;
 	this->prenda = prenda;
 	this->tienda = tienda;
