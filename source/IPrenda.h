@@ -8,8 +8,8 @@ class IPrenda
 public:
 	enum ECalidad
 	{
-		STANDARD,
-		PREMIUM
+		STANDARD = 10,
+		PREMIUM = 100
 	};
 
 	static ECalidad ecalidad;
@@ -20,6 +20,10 @@ public:
 	//Prenda(int codigo, Prenda::Calidad calidad);
 	
 	float calcularCotizacion(int cantidad, float precio);
+	string CaracteristicaToString(IPrenda::ECalidad e);
+
+	string toString();
+
 private:
 	float prendaPrecio = 0;
 };
