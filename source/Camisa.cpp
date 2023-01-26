@@ -13,10 +13,10 @@ Camisa::Camisa(IPrenda::ECalidad calidad, Camisa::ETipoCuello tipoCuello, Camisa
 }
 
 string Camisa::toString() {
-	return this->prendaCodigo + ": " + this->CaracteristicaToString(this->prendaCalidad) + ", " + this->CaracteristicaToString(this->camisaCuello) + ", " + this->CaracteristicaToString(this->camisaManga);
+	return this->prendaCodigo + ": " + this->caracteristicaToString(this->prendaCalidad) + ", " + this->caracteristicaToString(this->camisaCuello) + ", " + this->caracteristicaToString(this->camisaManga);
 }
 
-string Camisa::CaracteristicaToString(Camisa::ETipoCuello e)
+string Camisa::caracteristicaToString(Camisa::ETipoCuello e)
 {
     switch (e)
     {
@@ -25,7 +25,7 @@ string Camisa::CaracteristicaToString(Camisa::ETipoCuello e)
     }
 }
 
-string Camisa::CaracteristicaToString(Camisa::ETipoManga e)
+string Camisa::caracteristicaToString(Camisa::ETipoManga e)
 {
     switch (e)
     {
@@ -34,11 +34,15 @@ string Camisa::CaracteristicaToString(Camisa::ETipoManga e)
     }
 }
 
-string Camisa::CaracteristicaToString(IPrenda::ECalidad e)
+string Camisa::caracteristicaToString(IPrenda::ECalidad e)
 {
     switch (e)
     {
     case IPrenda::ECalidad::STANDARD: return "Normal";
     case IPrenda::ECalidad::PREMIUM: return "Premium";
     }
+}
+
+float calcularCotizacion(int cantidad, float precio) {
+    return 0;
 }

@@ -17,10 +17,9 @@ public:
 	string prendaCodigo;
 	
 	IPrenda::ECalidad prendaCalidad;
-	//Prenda(int codigo, Prenda::Calidad calidad);
 	
 	float calcularCotizacion(int cantidad, float precio);
-	string CaracteristicaToString(IPrenda::ECalidad e);
+	string caracteristicaToString(IPrenda::ECalidad e);
 
 	string toString();
 

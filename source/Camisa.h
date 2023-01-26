@@ -23,9 +23,10 @@ public:
 	Camisa(IPrenda::ECalidad calidad, Camisa::ETipoCuello tipoCuello, Camisa::ETipoManga tipoManga);
 
 	string toString();
-	string CaracteristicaToString(Camisa::ETipoCuello e);
-	string CaracteristicaToString(Camisa::ETipoManga e);
-	string CaracteristicaToString(Camisa::ECalidad e);
+	string caracteristicaToString(Camisa::ETipoCuello e);
+	string caracteristicaToString(Camisa::ETipoManga e);
+	string caracteristicaToString(Camisa::ECalidad e);
+	float calcularCotizacion(int cantidad, float precio);
 
 	//string toString();
 };
