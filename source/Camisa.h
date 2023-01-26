@@ -28,6 +28,5 @@ public:
 	string caracteristicaToString(Camisa::ECalidad e);
 	float calcularCotizacion(int cantidad, float precio);
 
-	//string toString();
 };
 

@@ -1,8 +1,4 @@
 #include "Camisa.h"
-//#include "include\magic_enum.hpp"
-
-#define stringify( name ) #name
-
 
 
 Camisa::Camisa(IPrenda::ECalidad calidad, Camisa::ETipoCuello tipoCuello, Camisa::ETipoManga tipoManga) {
@@ -43,6 +39,6 @@ string Camisa::caracteristicaToString(IPrenda::ECalidad e)
     }
 }
 
-float calcularCotizacion(int cantidad, float precio) {
+float Camisa::calcularCotizacion(int cantidad, float precio) {
     return 0;
 }

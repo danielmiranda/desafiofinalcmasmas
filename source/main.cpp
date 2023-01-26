@@ -2,6 +2,7 @@
 #include "Vendedor.h"
 #include "Tienda.h"
 #include "Camisa.h"
+#include "Pantalon.h"
 
 using namespace std;
 
@@ -31,6 +32,15 @@ int main()
     cout << camisa_standard_comun_mangalarga.toString() << endl;
     cout << camisa_premium_comun_mangalarga.toString() << endl;
 
+    // creamos pantalones
+    Pantalon pantalon_standard_normal = Pantalon(IPrenda::STANDARD, Pantalon::NORMAL);
+    Pantalon pantalon_standard_chupin = Pantalon(IPrenda::STANDARD, Pantalon::CHUPIN);
+    Pantalon pantalon_premium_normal = Pantalon(IPrenda::PREMIUM, Pantalon::NORMAL);
+    Pantalon pantalon_premium_chupin = Pantalon(IPrenda::PREMIUM, Pantalon::CHUPIN);
+    cout << pantalon_standard_normal.toString() << endl;
+    cout << pantalon_standard_chupin.toString() << endl;
+    cout << pantalon_premium_normal.toString() << endl;
+    cout << pantalon_premium_chupin.toString() << endl;
     
 
     // cout << camisa_standard_mao_mangacorta.CaracteristicaToString(camisa_standard_mao_mangacorta.camisaCuello) << endl;

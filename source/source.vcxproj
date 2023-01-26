@@ -134,6 +134,7 @@
     <ClCompile Include="Cotizacion.cpp" />
     <ClCompile Include="CotizacionPrenda.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pantalon.cpp" />
     <ClCompile Include="Stock.cpp" />
     <ClCompile Include="Tienda.cpp" />
     <ClCompile Include="Vendedor.cpp" />
@@ -143,6 +144,7 @@
     <ClInclude Include="Cotizacion.h" />
     <ClInclude Include="CotizacionPrenda.h" />
     <ClInclude Include="IPrenda.h" />
+    <ClInclude Include="Pantalon.h" />
     <ClInclude Include="Stock.h" />
     <ClInclude Include="Tienda.h" />
     <ClInclude Include="Vendedor.h" />
