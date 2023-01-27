@@ -1,5 +1,8 @@
 #pragma once
 #include <string>
+#include<iostream>
+#include "Stock.h"
+#include <vector>
 
 using namespace std;
 
@@ -11,11 +14,17 @@ public:
 	string obtenerDireccion();
 	string toString();
 
+	void listarStock();
+	bool agregarStock(Stock* itemStock);
+
 	Tienda();
 	Tienda(string nombre, string direccion);
 
 private:
 	string tiendaNombre;
 	string tiendaDireccion;
+	Stock* stock[12];
+	vector<Stock*> stockList;
+
 };
 

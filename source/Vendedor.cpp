@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Vendedor::Vendedor(string nombre, string apellido, int codigo, Tienda* tienda) {
+Vendedor::Vendedor(string nombre, string apellido, int codigo, Tienda * tienda) {
 	this->vendedorNombre = nombre;
 	this->vendedorApellido = apellido;
 	this->vendedorCodigo = codigo;

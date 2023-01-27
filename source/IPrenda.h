@@ -21,7 +21,7 @@ public:
 	float calcularCotizacion(int cantidad, float precio);
 	string caracteristicaToString(IPrenda::ECalidad e);
 
-	string toString();
+	virtual string toString();
 
 private:
 	float prendaPrecio = 0;
