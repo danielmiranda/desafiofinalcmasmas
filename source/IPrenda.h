@@ -11,8 +11,8 @@ class IPrenda
 public:
 	enum ECalidad
 	{
-		STANDARD = 10,
-		PREMIUM = 100
+		STANDARD,
+		PREMIUM
 	};
 
 	static ECalidad ecalidad;

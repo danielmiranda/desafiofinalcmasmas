@@ -36,6 +36,15 @@ float Pantalon::calcularCotizacion(int cantidad, float precio) {
         float precioCon12PorcientodeDescuento = precio * (1 - 0.12); //hacemos el descuento del 12%
         precio = precioCon12PorcientodeDescuento;
     }
+
+    if (this->prendaCalidad == PREMIUM) {
+        float precioCon30PorcientodeAumento = precio * (1 + 0.3); //hacemos el aumento del 30%
+        precio = precioCon30PorcientodeAumento;
+    }
+
+    //precio = IPrenda::calcularCotizacion(cantidad, precio);
+    //precio = __super::calcularCotizacion(cantidad, precio);
+
     return cantidad * precio;
 }
 

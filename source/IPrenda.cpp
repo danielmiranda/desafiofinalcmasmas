@@ -19,7 +19,7 @@ bool IPrenda::_equals(IPrenda & other)
 }
 
 float IPrenda::calcularCotizacion(int cantidad, float precio) {
-    return cantidad * precio;
+    return precio;
 }
 
 

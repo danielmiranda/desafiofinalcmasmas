@@ -100,6 +100,10 @@ int main()
 
     cout << "Cantidad: " + std::to_string(cantidadPantalonChupinPremium) << endl;
 
+    float cotizacion = pantalon->calcularCotizacion(1, 100);
+
+    cout << "Cotizacion: " + std::to_string(cotizacion) << endl;
+
     //(*pantalon == *pantalon_premium_chupin) ? printf("PANTALONES IGUALES") : printf("PANTALONES DISTINTOS");
 
     // cout << camisa_standard_mao_mangacorta.CaracteristicaToString(camisa_standard_mao_mangacorta.camisaCuello) << endl;

@@ -50,6 +50,13 @@ float Camisa::calcularCotizacion(int cantidad, float precio) {
         precio = precioCon3PorcientodeAumento;
     }
 
+    if (this->prendaCalidad == PREMIUM) {
+        float precioCon30PorcientodeAumento = precio * (1 + 0.3); //hacemos el aumento del 30%
+        precio = precioCon30PorcientodeAumento;
+    }
+
+    precio = IPrenda::calcularCotizacion(cantidad, precio);
+
     return cantidad * precio;
 }
 
