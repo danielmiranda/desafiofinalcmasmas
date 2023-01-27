@@ -20,7 +20,7 @@ public:
 	string toString();
 	string caracteristicaToString(Pantalon::ETipoPantalon e);
 	string caracteristicaToString(Pantalon::ECalidad e);
-	float calcularCotizacion(int cantidad, float precio);
+	float calcularCotizacion(int cantidad, float precio) override;
 
 	bool operator==(const Pantalon& ref1) const;
 

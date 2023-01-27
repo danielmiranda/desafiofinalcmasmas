@@ -26,7 +26,7 @@ public:
 	string caracteristicaToString(Camisa::ETipoCuello e);
 	string caracteristicaToString(Camisa::ETipoManga e);
 	string caracteristicaToString(Camisa::ECalidad e);
-	float calcularCotizacion(int cantidad, float precio);
+	float calcularCotizacion(int cantidad, float precio) override;
 
 	bool operator==(const Camisa& ref1) const;
 

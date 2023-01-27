@@ -21,13 +21,12 @@ public:
 	
 	IPrenda::ECalidad prendaCalidad;
 	
-	float calcularCotizacion(int cantidad, float precio);
+	virtual float calcularCotizacion(int cantidad, float precio);
 	string caracteristicaToString(IPrenda::ECalidad e);
 
 	virtual string toString();
 
 	bool operator==( IPrenda &ref) ;
-	bool igual(IPrenda &ref);
 
 	virtual bool _equals(IPrenda & other) ;
 

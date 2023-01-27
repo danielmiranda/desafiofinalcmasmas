@@ -40,7 +40,17 @@ string Camisa::caracteristicaToString(IPrenda::ECalidad e)
 }
 
 float Camisa::calcularCotizacion(int cantidad, float precio) {
-    return 0;
+    if (this->camisaManga == this->CORTA) {
+        float precioCon10PorcientodeDescuento = precio * (1 - 0.1); //hacemos el descuento del 10%
+        precio = precioCon10PorcientodeDescuento;
+    }
+
+    if (this->camisaCuello == this->MAO) {
+        float precioCon3PorcientodeAumento = precio * (1 + 0.03); //hacemos el aumento del 3%
+        precio = precioCon3PorcientodeAumento;
+    }
+
+    return cantidad * precio;
 }
 
 bool Camisa::operator==(const Camisa& ref1) const {

@@ -32,7 +32,11 @@ string Pantalon::caracteristicaToString(IPrenda::ECalidad e)
 }
 
 float Pantalon::calcularCotizacion(int cantidad, float precio) {
-    return 0;
+    if (this->pantalonTipo == this->CHUPIN) {
+        float precioCon12PorcientodeDescuento = precio * (1 - 0.12); //hacemos el descuento del 12%
+        precio = precioCon12PorcientodeDescuento;
+    }
+    return cantidad * precio;
 }
 
 //bool Pantalon::operator == (const Pantalon& rhs) const {

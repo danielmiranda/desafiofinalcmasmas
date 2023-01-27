@@ -6,10 +6,6 @@ string IPrenda::toString() {
 	return "";
 }
 
-bool IPrenda::igual(IPrenda &ref) {
-	return false;
-}
-
 bool IPrenda::operator==(IPrenda& ref)  {
 	//return this->igual(ref);
 	bool result = this->_equals(ref);
@@ -20,6 +16,10 @@ bool IPrenda::_equals(IPrenda & other)
 {
     if (typeid(*this) != typeid(other)) return false;
     return this->prendaCalidad == other.prendaCalidad;
+}
+
+float IPrenda::calcularCotizacion(int cantidad, float precio) {
+    return cantidad * precio;
 }
 
 
