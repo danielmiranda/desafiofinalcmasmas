@@ -28,5 +28,9 @@ public:
 	string caracteristicaToString(Camisa::ECalidad e);
 	float calcularCotizacion(int cantidad, float precio);
 
+	bool operator==(const Camisa& ref1) const;
+
+	virtual bool _equals(IPrenda& other);
+
 };
 

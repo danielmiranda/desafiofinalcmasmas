@@ -14,10 +14,15 @@ public:
 	ETipoPantalon pantalonTipo;
 	string prendaCodigo = "PANTALON";
 
+	Pantalon();
 	Pantalon(IPrenda::ECalidad calidad, Pantalon::ETipoPantalon tipoPantalon);
 
 	string toString();
 	string caracteristicaToString(Pantalon::ETipoPantalon e);
 	string caracteristicaToString(Pantalon::ECalidad e);
 	float calcularCotizacion(int cantidad, float precio);
+
+	bool operator==(const Pantalon& ref1) const;
+
+	virtual bool _equals(IPrenda & other);
 };

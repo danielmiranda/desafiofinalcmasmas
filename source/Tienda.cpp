@@ -1,4 +1,5 @@
 #include "Tienda.h"
+#include <algorithm>
 
 
 Tienda::Tienda(string nombre, string direccion) {
@@ -24,6 +25,20 @@ string Tienda::toString() {
 bool Tienda::agregarStock(Stock* itemStock) {
 	this->stockList.push_back(itemStock);
 	return true;
+}
+
+int Tienda::obtenerStock(IPrenda* itemStock) {
+	int cantidadStock = 0;
+
+	for (auto it : this->stockList) {
+
+		if (*itemStock == *it->prenda) {
+			cantidadStock = it->obtenerCantidad();
+			break;
+		}
+	}
+	
+	return cantidadStock;
 }
 
 void Tienda::listarStock() {

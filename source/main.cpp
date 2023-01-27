@@ -95,8 +95,16 @@ int main()
 
     tienda_lunar->listarStock();
 
+    Pantalon * pantalon = new Pantalon(IPrenda::PREMIUM, Pantalon::CHUPIN);
+    int cantidadPantalonChupinPremium = tienda_lunar->obtenerStock( pantalon );
+
+    cout << "Cantidad: " + std::to_string(cantidadPantalonChupinPremium) << endl;
+
+    //(*pantalon == *pantalon_premium_chupin) ? printf("PANTALONES IGUALES") : printf("PANTALONES DISTINTOS");
+
     // cout << camisa_standard_mao_mangacorta.CaracteristicaToString(camisa_standard_mao_mangacorta.camisaCuello) << endl;
     //cout << camisa_standard_mao_mangacorta.CaracteristicaToString(camisa_standard_mao_mangacorta.camisaManga) << endl;
+
 
     return 0;
 }

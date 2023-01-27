@@ -16,6 +16,8 @@ public:
 	int obtenerCantidad();
 	string toString();
 
+	
+
 private:
 	int cantidad = 0;
 };

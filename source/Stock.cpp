@@ -20,3 +20,4 @@ int Stock::obtenerCantidad() {
 string Stock::toString() {
 	return this->prenda->toString() + " : " + std::to_string(this->cantidad);
 }
+

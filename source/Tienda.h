@@ -16,6 +16,7 @@ public:
 
 	void listarStock();
 	bool agregarStock(Stock* itemStock);
+	int obtenerStock(IPrenda* itemStock);
 
 	Tienda();
 	Tienda(string nombre, string direccion);

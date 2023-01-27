@@ -42,3 +42,19 @@ string Camisa::caracteristicaToString(IPrenda::ECalidad e)
 float Camisa::calcularCotizacion(int cantidad, float precio) {
     return 0;
 }
+
+bool Camisa::operator==(const Camisa& ref1) const {
+    return ref1.prendaCalidad == this->prendaCalidad and ref1.camisaCuello == this->camisaCuello;
+}
+
+bool Camisa::_equals(IPrenda& ref)
+{
+    if (typeid(*this) != typeid(ref)) return false;
+
+    Camisa* camisa = static_cast<Camisa*>(&ref);
+
+    return (camisa->prendaCalidad == this->prendaCalidad 
+        && camisa->camisaCuello == this->camisaCuello
+        && camisa->camisaManga == this->camisaManga
+        );
+}

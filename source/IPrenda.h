@@ -1,6 +1,9 @@
 #pragma once
 #include <string>
 
+#include <typeinfo>
+#include <typeindex>
+
 using namespace std;
 
 class IPrenda
@@ -23,7 +26,15 @@ public:
 
 	virtual string toString();
 
+	bool operator==( IPrenda &ref) ;
+	bool igual(IPrenda &ref);
+
+	virtual bool _equals(IPrenda & other) ;
+
+
 private:
 	float prendaPrecio = 0;
+
+	
 };
 
