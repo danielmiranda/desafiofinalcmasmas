@@ -47,14 +47,14 @@ int main()
     cout << pantalon_premium_chupin.toString() << endl;
     */
     // Creamos el stock
-    Stock stock_camisa_standard_mao_mangacorta = Stock(camisa_standard_mao_mangacorta, 100);
-    Stock stock_camisa_premium_mao_mangacorta = Stock(camisa_premium_mao_mangacorta, 100);
-    Stock stock_camisa_standard_comun_mangacorta = Stock(camisa_standard_comun_mangacorta, 150);
-    Stock stock_camisa_premium_comun_mangacorta = Stock(camisa_premium_comun_mangacorta, 150);
-    Stock stock_camisa_standard_mao_mangalarga = Stock(camisa_standard_mao_mangalarga, 75);
-    Stock stock_camisa_premium_mao_mangalarga = Stock(camisa_premium_mao_mangalarga, 75);
-    Stock stock_camisa_standard_comun_mangalarga = Stock(camisa_standard_comun_mangalarga, 175);
-    Stock stock_camisa_premium_comun_mangalarga = Stock(camisa_premium_comun_mangalarga, 175);
+    Stock * stock_camisa_standard_mao_mangacorta = new Stock(camisa_standard_mao_mangacorta, 100);
+    Stock * stock_camisa_premium_mao_mangacorta = new Stock(camisa_premium_mao_mangacorta, 100);
+    Stock * stock_camisa_standard_comun_mangacorta = new Stock(camisa_standard_comun_mangacorta, 150);
+    Stock * stock_camisa_premium_comun_mangacorta = new Stock(camisa_premium_comun_mangacorta, 150);
+    Stock * stock_camisa_standard_mao_mangalarga = new Stock(camisa_standard_mao_mangalarga, 75);
+    Stock * stock_camisa_premium_mao_mangalarga = new Stock(camisa_premium_mao_mangalarga, 75);
+    Stock * stock_camisa_standard_comun_mangalarga = new Stock(camisa_standard_comun_mangalarga, 175);
+    Stock * stock_camisa_premium_comun_mangalarga = new Stock(camisa_premium_comun_mangalarga, 175);
 
     /*
     cout << stock_camisa_standard_mao_mangacorta.toString() << endl;
@@ -67,7 +67,6 @@ int main()
     cout << stock_camisa_premium_comun_mangalarga.toString() << endl;   
     */
 
-    
     Stock * stock_pantalon_standard_normal = new Stock( pantalon_standard_normal, 250);
     Stock * stock_pantalon_premium_normal = new Stock( pantalon_premium_normal, 250);
     Stock * stock_pantalon_standard_chupin = new Stock( pantalon_standard_chupin, 750);
@@ -80,12 +79,21 @@ int main()
     cout << stock_pantalon_premium_chupin->toString() << endl;    
     */
 
-
     tienda_lunar->agregarStock(stock_pantalon_standard_normal);
     tienda_lunar->agregarStock(stock_pantalon_premium_normal);
     tienda_lunar->agregarStock(stock_pantalon_standard_chupin);
     tienda_lunar->agregarStock(stock_pantalon_premium_chupin);
 
+    tienda_lunar->agregarStock(stock_camisa_standard_mao_mangacorta);
+    tienda_lunar->agregarStock(stock_camisa_premium_mao_mangacorta);
+    tienda_lunar->agregarStock(stock_camisa_standard_comun_mangacorta);
+    tienda_lunar->agregarStock(stock_camisa_premium_comun_mangacorta);
+    tienda_lunar->agregarStock(stock_camisa_standard_mao_mangalarga);
+    tienda_lunar->agregarStock(stock_camisa_premium_mao_mangalarga);
+    tienda_lunar->agregarStock(stock_camisa_standard_comun_mangalarga);
+    tienda_lunar->agregarStock(stock_camisa_premium_comun_mangalarga);
+
+    tienda_lunar->listarStock();
 
     // cout << camisa_standard_mao_mangacorta.CaracteristicaToString(camisa_standard_mao_mangacorta.camisaCuello) << endl;
     //cout << camisa_standard_mao_mangacorta.CaracteristicaToString(camisa_standard_mao_mangacorta.camisaManga) << endl;

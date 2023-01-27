@@ -23,15 +23,15 @@ string Tienda::toString() {
 
 bool Tienda::agregarStock(Stock* itemStock) {
 	this->stockList.push_back(itemStock);
-
-	for (auto it : this->stockList) {
-		cout << "Owner:" << it->toString()
-			<< "  Address_of_Land:" << it << endl;
-	}
-
-	return false;
+	return true;
 }
 
 void Tienda::listarStock() {
+
 	cout << "STOCK Disponible: " << endl;
+
+	for (auto it : this->stockList) {
+		cout << "Item: " << it->toString() << endl;
+	}
+	
 }
