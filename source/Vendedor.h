@@ -11,6 +11,7 @@ public:
 	int obtenerCodigo();
 	string toString();
 	string obtenerTienda();
+	//string obtenerTiendaDireccion();
 
 private:
 	string vendedorNombre;

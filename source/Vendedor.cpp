@@ -17,6 +17,10 @@ string Vendedor::obtenerTienda() {
 	return this->vendedorTienda->toString();
 }
 
+//string Vendedor::obtenerTiendaDireccion() {
+//	return this->vendedorTienda->toString();
+//}
+
 int Vendedor::obtenerCodigo() {
 	return this->vendedorCodigo;
 }

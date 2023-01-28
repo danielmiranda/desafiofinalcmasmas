@@ -19,7 +19,7 @@ string Tienda::obtenerDireccion() {
 }
 
 string Tienda::toString() {
-	return this->obtenerNombre() + ", " + this->obtenerDireccion();
+	return this->obtenerNombre() + " | " + this->obtenerDireccion();
 }
 
 bool Tienda::agregarStock(Stock* itemStock) {

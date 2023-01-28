@@ -4,6 +4,7 @@
 #include "Camisa.h"
 #include "Pantalon.h"
 #include "Stock.h"
+#include "PantallaPrincipal.h"
 
 using namespace std;
 
@@ -109,6 +110,10 @@ int main()
     // cout << camisa_standard_mao_mangacorta.CaracteristicaToString(camisa_standard_mao_mangacorta.camisaCuello) << endl;
     //cout << camisa_standard_mao_mangacorta.CaracteristicaToString(camisa_standard_mao_mangacorta.camisaManga) << endl;
 
+    PantallaPrincipal* pantalla = new PantallaPrincipal();
+    //pantalla->setTienda(tienda_lunar);
+    pantalla->setVendedor(vendedor_selenita);
+    pantalla->show();
 
     return 0;
 }
