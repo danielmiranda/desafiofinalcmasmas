@@ -132,7 +132,6 @@
   <ItemGroup>
     <ClCompile Include="Camisa.cpp" />
     <ClCompile Include="Cotizacion.cpp" />
-    <ClCompile Include="CotizacionPrenda.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PantallaPrincipal.cpp" />
     <ClCompile Include="Pantalon.cpp" />
@@ -144,7 +143,6 @@
   <ItemGroup>
     <ClInclude Include="Camisa.h" />
     <ClInclude Include="Cotizacion.h" />
-    <ClInclude Include="CotizacionPrenda.h" />
     <ClInclude Include="IPrenda.h" />
     <ClInclude Include="PantallaPrincipal.h" />
     <ClInclude Include="Pantalon.h" />

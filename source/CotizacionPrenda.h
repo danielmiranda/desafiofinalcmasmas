@@ -1,3 +1,4 @@
+/*
 #pragma once
 #include "IPrenda.h"
 
@@ -11,4 +12,5 @@ private:
 	string cotizacionPrendaDetalle;
 
 };
+*/
 

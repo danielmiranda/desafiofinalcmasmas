@@ -26,6 +26,8 @@ public:
 
 	static int cotizacionNumero;
 
+	string obtenerStockParaImprimir();
+
 private:
 	string tiendaNombre;
 	string tiendaDireccion;

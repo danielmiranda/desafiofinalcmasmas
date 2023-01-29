@@ -12,6 +12,7 @@ public:
 	Cotizacion(string prendaDetalle, int cantidad, float subTotal, float precio, string vendedor);
 	string toString();
 	float obtenerTotal();
+	string obtenerCotizacionParaImprimir();
 
 private:
 	int cotizacionNumero;
