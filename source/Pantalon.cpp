@@ -65,3 +65,4 @@ bool Pantalon::_equals(IPrenda & ref)
     return (pantalon->prendaCalidad == this->prendaCalidad 
         && pantalon->pantalonTipo == this->pantalonTipo);
 }
+

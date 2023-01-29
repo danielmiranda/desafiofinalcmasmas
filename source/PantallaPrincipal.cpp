@@ -8,11 +8,21 @@ void PantallaPrincipal::show()
 	string tituloTienda = this->vendedor->obtenerTienda();
 	cout << this->center(tituloTienda) << endl;
 	cout << MSG_SEPARADOR << endl;
-	string tituloVendedor = this->vendedor->obtenerNombre() + " | " + std::to_string(this->vendedor->obtenerCodigo());
+	string tituloVendedor = this->vendedor->obtenerNombre() + " | " + "cod: " + std::to_string(this->vendedor->obtenerCodigo());
 	cout << this->center(tituloVendedor) << endl;
 	cout << MSG_SEPARADOR << endl;
 	cout << endl;
+	this->showMenu();
 
+}
+void PantallaPrincipal::showMenu()
+{
+	cout << " SELECCIONE UNA OPCION DEL MENU" << endl;
+	cout << endl;
+	cout << " 1) Historial de Cotizaciones" << endl;
+	cout << " 2) Realizar Cotizacion" << endl;
+	cout << " 3) Salir" << endl;
+	cout << endl;
 
 }
 void PantallaPrincipal::clear()
@@ -24,8 +34,8 @@ string PantallaPrincipal::center(string txt)
 {
 	int txtLenght = txt.length();
 	int paddingSpace = 0;
-	if (txtLenght < 80) {
-		paddingSpace = (80 - txtLenght) / 2;
+	if (txtLenght < WIDTHSCREEN) {
+		paddingSpace = (WIDTHSCREEN - txtLenght) / 2;
 	}
 
 	std::string spaces(paddingSpace, ' ');

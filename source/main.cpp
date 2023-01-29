@@ -5,6 +5,7 @@
 #include "Pantalon.h"
 #include "Stock.h"
 #include "PantallaPrincipal.h"
+#include "Cotizacion.h"
 
 using namespace std;
 
@@ -114,6 +115,13 @@ int main()
     //pantalla->setTienda(tienda_lunar);
     pantalla->setVendedor(vendedor_selenita);
     pantalla->show();
+
+    cout << "Cotizacion: " + std::to_string(cotizacion) << endl;
+
+    //Cotizacion* cotizar = new Cotizacion("Prenda Detalle", 100, 99, 0.99);
+    //Cotizacion* cotizar1 = new Cotizacion("Prenda Detalle", 330, 33, 10);
+
+    //cout << cotizar1->toString("81") << endl;
 
     return 0;
 }

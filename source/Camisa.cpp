@@ -75,3 +75,4 @@ bool Camisa::_equals(IPrenda& ref)
         && camisa->camisaManga == this->camisaManga
         );
 }
+

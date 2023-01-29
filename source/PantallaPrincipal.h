@@ -4,9 +4,10 @@
 #include "Tienda.h"
 #include "Vendedor.h"
 
+#define WIDTHSCREEN 56
 
 const std::string MSG_TITULO = "COTIZADOR EXPRESS - MENU PRINCIPAL";
-const std::string MSG_SEPARADOR(80, '-');
+const std::string MSG_SEPARADOR(WIDTHSCREEN, '-');
 
 
 using namespace std;
@@ -19,6 +20,7 @@ public:
 	string center(string txt);
 	void setTienda(Tienda* tienda);
 	void setVendedor(Vendedor * vendedor);
+	virtual void showMenu();
 
 private:
 	Tienda* tienda;

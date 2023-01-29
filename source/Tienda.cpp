@@ -1,13 +1,17 @@
 #include "Tienda.h"
 #include <algorithm>
 
+int Tienda::cotizacionNumero = 0;
+
 
 Tienda::Tienda(string nombre, string direccion) {
+
 	this->tiendaNombre = nombre;
 	this->tiendaDireccion = direccion;
 }
 
 Tienda::Tienda(){}
+
 
 string Tienda::obtenerNombre() {
 	return this->tiendaNombre;

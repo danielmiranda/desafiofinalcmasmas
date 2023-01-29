@@ -2,24 +2,23 @@
 #include <string>
 #include <ctime>
 #include "Vendedor.h"
-#include "IPrenda.h"
 
 using namespace std;
 
 class Cotizacion
 {
 public:
+	Cotizacion();
+	Cotizacion(string prendaDetalle, int cantidad, float subTotal, float precio);
+	string toString(string vendedor);
+
+private:
 	int cotizacionNumero;
 	time_t cotizacionFechaHora;
-	Vendedor* cotizacionVendedor = NULL;
-	float cotizacionResultado;
-	IPrenda cotizacionPrenda;
+	string cotizacionPrendaDetalle;
 	int cotizacionCantidad;
 	float cotizacionTotal;
-
-	Cotizacion(Vendedor *vendedor);
-
-	string toString();
+	float cotizacionPrecio;
 
 };
 

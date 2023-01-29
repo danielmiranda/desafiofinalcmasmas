@@ -4,6 +4,8 @@
 #include <typeinfo>
 #include <typeindex>
 
+//#include "Cotizacion.h"
+
 using namespace std;
 
 class IPrenda
@@ -26,9 +28,11 @@ public:
 
 	virtual string toString();
 
-	bool operator==( IPrenda &ref) ;
+	bool operator==( IPrenda &ref);
 
-	virtual bool _equals(IPrenda & other) ;
+	virtual bool _equals(IPrenda & other);
+
+	//Cotizacion obtenerCotizacion(int cantidad, float precio);
 
 
 private:

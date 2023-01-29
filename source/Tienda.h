@@ -21,11 +21,16 @@ public:
 	Tienda();
 	Tienda(string nombre, string direccion);
 
+	static int cotizacionNumero;
+
+
 private:
 	string tiendaNombre;
 	string tiendaDireccion;
 	Stock* stock[12];
 	vector<Stock*> stockList;
+
+	
 
 };
 

@@ -25,4 +25,5 @@ public:
 	bool operator==(const Pantalon& ref1) const;
 
 	virtual bool _equals(IPrenda & other);
+
 };

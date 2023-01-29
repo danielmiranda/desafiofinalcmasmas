@@ -1,7 +1,7 @@
 #include "CotizacionPrenda.h"
 
-CotizacionPrenda::CotizacionPrenda(IPrenda *prenda, int cantidad) {
-	this->prendaCodigo = prenda;
+CotizacionPrenda::CotizacionPrenda(int cantidad, string prendaDetalle) {
+	this->cotizacionPrendaDetalle = prendaDetalle;
 	this->cantidad = cantidad;
 	//this->subtotal = this->prendaCodigo->prendaPrecio * cantidad;
 
