@@ -23,15 +23,15 @@ float IPrenda::calcularCotizacion(int cantidad, float precio) {
 }
 
 /*
-Cotizacion* IPrenda::obtenerCotizacion(int cantidad, float precio) {
+
+*/
+Cotizacion IPrenda::obtenerCotizacion(int cantidad, float precio) {
     float total = this->calcularCotizacion(cantidad, precio);
-    Cotizacion* cotizar = new Cotizacion("Prenda Detalle", 1, 11, 1);
+    Cotizacion cotiza = Cotizacion("Prenda Detalle", 1, 11, 1);
     //Cotizacion * cotizar = new Cotizacion("Prenda Detalle", cantidad, total, precio);
 
-    return cotizar;
+    return cotiza;
 }
-*/
-
 
 
 

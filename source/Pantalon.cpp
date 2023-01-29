@@ -66,3 +66,14 @@ bool Pantalon::_equals(IPrenda & ref)
         && pantalon->pantalonTipo == this->pantalonTipo);
 }
 
+/*
+Cotizacion Pantalon::obtenerCotizacion(int cantidad, float precio) {
+    float total = this->calcularCotizacion(cantidad, precio);
+    Cotizacion cotiza = Cotizacion("Prenda Detalle", 1, 11, 1);
+    //Cotizacion * cotizar = new Cotizacion("Prenda Detalle", cantidad, total, precio);
+
+    return cotiza;
+}
+*/
+
+

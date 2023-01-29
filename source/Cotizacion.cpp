@@ -1,5 +1,5 @@
 #include "Cotizacion.h"
-#include "Vendedor.h"
+//#include "Vendedor.h"
 #include "Tienda.h"
 #include <ctime>
 
@@ -9,10 +9,10 @@
 
 using namespace std;
 
-Cotizacion::Cotizacion(){}
+//Cotizacion::Cotizacion(){}
 Cotizacion::Cotizacion(string prendaDetalle, int cantidad, float subTotal, float precio) {
 
-	int numero = ++Tienda::cotizacionNumero;
+	int numero =  ++Tienda::cotizacionNumero;
 
 	this->cotizacionFechaHora = time(0);
 	this->cotizacionNumero = numero;

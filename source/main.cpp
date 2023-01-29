@@ -106,6 +106,9 @@ int main()
 
     cout << "Cotizacion: " + std::to_string(cotizacion) << endl;
 
+
+
+
     //(*pantalon == *pantalon_premium_chupin) ? printf("PANTALONES IGUALES") : printf("PANTALONES DISTINTOS");
 
     // cout << camisa_standard_mao_mangacorta.CaracteristicaToString(camisa_standard_mao_mangacorta.camisaCuello) << endl;
@@ -116,12 +119,23 @@ int main()
     pantalla->setVendedor(vendedor_selenita);
     pantalla->show();
 
-    cout << "Cotizacion: " + std::to_string(cotizacion) << endl;
+    //cout << "Cotizacion: " + std::to_string(cotizacion) << endl;
+    /*
+    Cotizacion* cotizar = new Cotizacion("Prenda Detalle", 100, 99, 0.99);
+    Cotizacion* cotizar1 = new Cotizacion("Prenda Detalle", 330, 33, 10);
 
-    //Cotizacion* cotizar = new Cotizacion("Prenda Detalle", 100, 99, 0.99);
-    //Cotizacion* cotizar1 = new Cotizacion("Prenda Detalle", 330, 33, 10);
+    cout << cotizar1->toString("81") << endl;   
+    */
 
-    //cout << cotizar1->toString("81") << endl;
+    Cotizacion cotiza = pantalon->obtenerCotizacion(1, 100);
+    Cotizacion cotiza1 = pantalon->obtenerCotizacion(12, 30);
+
+    
+    cout << "Cotizacion: " + cotiza.toString("VENDEDOR") << endl;
+    cout << "Cotizacion: " + cotiza1.toString("VENDEDOR") << endl;
+
+
+
 
     return 0;
 }

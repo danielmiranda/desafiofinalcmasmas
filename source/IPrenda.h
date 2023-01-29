@@ -4,7 +4,7 @@
 #include <typeinfo>
 #include <typeindex>
 
-//#include "Cotizacion.h"
+#include "Cotizacion.h"
 
 using namespace std;
 
@@ -32,7 +32,7 @@ public:
 
 	virtual bool _equals(IPrenda & other);
 
-	//Cotizacion obtenerCotizacion(int cantidad, float precio);
+	Cotizacion obtenerCotizacion(int cantidad, float precio);
 
 
 private:

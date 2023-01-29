@@ -26,4 +26,6 @@ public:
 
 	virtual bool _equals(IPrenda & other);
 
+	//Cotizacion obtenerCotizacion(int cantidad, float precio);
+
 };
