@@ -50,34 +50,78 @@ void PantallaPrincipal::showCotizacion()
 		cout << MSG_SEPARADOR << endl;
 		this->showMenuCotizacion();
 
-		//std::cin >> option;
-		//std::system("cls");
+		
 
+		if (paso == 40) {
+			Cotizacion cotiza = prenda->obtenerCotizacion(cantidadPrenda, precioPrenda);
+			this->tienda->agregarCotizacion(&cotiza);
+			cout << cotiza.toString();
+			cout << endl << MSG_SEPARADOR << endl;
+			this->showMenuCotizacion();
 
-		if (paso == 3) {
+			cin >> option;
+			this->show();
+			exitCondition = true;
+			paso = 9999;
+		}
+
+		if (paso == 30) {
 
 			int cantidadStock = this->tienda->obtenerStock(prenda);
 
 			cout << "INFORMACION:" << endl;
-			cout << "Existe " << cantidadStock << " cantidades en stock de la prenda seleccionada" << endl << endl;
+			cout << "Existe " << cantidadStock << " unidades en stock de la prenda seleccionada" << endl << endl;
 			cout << "Paso 5: Ingrese la cantidad de prendas a cotiza:" << endl;
 			cout << "CANTIDAD: ";
 			cin >> cantidadPrenda;
 
-			cout << cantidadPrenda << endl;
-			cin >> option;
-			paso = 4;
+			paso = 40;
 		}
 
-		if (paso == 2) {
+		if (paso == 20) {
 			cout << "Paso 4: Ingrese el precio de la prenda a cotiza:" << endl;
 			cout << "$ ";
 
-			//Cotizacion cotiza = prenda->obtenerCotizacion(1, 100);
-			//cout << cotiza.toString();
-
 			cin >> precioPrenda;
-			paso = 3;
+			paso = 30;
+		}
+
+		if (paso == 5) {
+			Pantalon::ETipoPantalon tipoPantalon;
+			Pantalon::ECalidad calidad;
+
+			cout << "Paso 2.a: El pantalon a cotizar es chupin?:" << endl;
+			cout << "1) Si" << endl;
+			cout << "2) No" << endl;
+			cin >> option;
+			string str_option = std::string(option);
+			verOpcionesCotizacion(str_option, exitCondition, paso);
+
+			if (str_option == "1") {
+				tipoPantalon = Pantalon::CHUPIN;
+			}
+			if (str_option == "2") {
+				tipoPantalon = Pantalon::NORMAL;
+			}
+
+			cout << "Paso 3: Seleccione la calidad de la prenda" << endl;
+			cout << "1) Standard" << endl;
+			cout << "2) Premium" << endl;
+			cin >> option;
+			str_option = std::string(option);
+			verOpcionesCotizacion(str_option, exitCondition, paso);
+			if (str_option == "1") {
+				calidad = Pantalon::STANDARD;
+			}
+			if (str_option == "2") {
+				calidad = Pantalon::PREMIUM;
+			}
+
+			Pantalon* pantalon = new Pantalon(calidad, tipoPantalon);
+			prenda = pantalon;
+
+			paso = 20;
+
 		}
 
 		if (paso == 1) {
@@ -116,6 +160,7 @@ void PantallaPrincipal::showCotizacion()
 			cout << "2) Premium" << endl;
 			cin >> option;
 			str_option = std::string(option);
+			verOpcionesCotizacion(str_option, exitCondition, paso);
 			if (str_option == "1") {
 				calidad = Camisa::STANDARD;
 			}
@@ -126,10 +171,7 @@ void PantallaPrincipal::showCotizacion()
 			Camisa* camisa = new Camisa(calidad, cuello, manga);
 			prenda = camisa;
 
-			
-
-
-			paso = 2;
+			paso = 20;
 
 		}
 
@@ -139,23 +181,17 @@ void PantallaPrincipal::showCotizacion()
 			cout << "2) Pantalon" << endl;
 			cin >> option;
 			string str_option = std::string(option);
+			verOpcionesCotizacion(str_option, exitCondition, paso);
 			if (str_option == "1") {
 				// Camisa
-				prenda = new Camisa();
 				paso = 1;
 			}
 			if (str_option == "2") {
 				// Pantalon
-				prenda = new Pantalon();
-				paso = 2;
+				paso = 5;
 			}
-			//cout << str_option;
+
 		}
-
-		
-		//std::cin >> option;
-		//verOpcionesCotizacion(option.c_str(), exitCondition, paso);
-
 
 		std::cin.get();
 
@@ -263,28 +299,14 @@ void PantallaPrincipal::verOpciones(const char* option, bool& exitCondition)
 		exitCondition = false;
 	}
 }
-void PantallaPrincipal::verOpcionesCotizacion(const char* option, bool& exitCondition, int& paso)
+void PantallaPrincipal::verOpcionesCotizacion(string str_option, bool& exitCondition, int& paso)
 {
-	auto str_option = std::string(option);
 
-	cout << "OPCION: " << str_option;
-
-	
-	if (str_option == "1")
+	if (str_option == "1" || str_option == "2")
 	{
-		cout << "CAMISA: PRESIONE ENTER PARA CNOTINUAR";
-		paso = 1;
-		std::cin.get();
 		exitCondition = false;
 	}
-	if (str_option == "2")
-	{
-		paso = 2;
-		cout << "PANTALON: PRESIONE ENTER PARA CNOTINUAR";
-		std::cin.get();
-		exitCondition = false;
-	}
-	if (str_option == "3")
+	else if (str_option == "3")
 	{
 		this->show();
 		exitCondition = true;

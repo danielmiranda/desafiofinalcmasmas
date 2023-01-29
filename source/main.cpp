@@ -123,14 +123,16 @@ int main()
     cout << cotizar1->toString("81") << endl;   
     */
 
-    Cotizacion cotiza = pantalon->obtenerCotizacion(1, 100);
-    Cotizacion cotiza1 = pantalon->obtenerCotizacion(12, 30);
+    //Cotizacion cotiza = pantalon->obtenerCotizacion(1, 100);
+    //Cotizacion cotiza1 = pantalon->obtenerCotizacion(12, 30);
 
-    tienda_lunar->agregarCotizacion(&cotiza);
-    tienda_lunar->agregarCotizacion(&cotiza1);
+    //tienda_lunar->agregarCotizacion(&cotiza);
+    //tienda_lunar->agregarCotizacion(&cotiza1);
 
 
-    string o = tienda_lunar->listarCotizaciones();
+    //string o = tienda_lunar->listarCotizaciones();
+
+    // Mostramos la Pantalla Principal
     pantalla->show();
 
 

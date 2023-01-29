@@ -24,8 +24,9 @@ Cotizacion::Cotizacion(string prendaDetalle, int cantidad, float subTotal, float
 
 	this->cotizacionVendedor = vendedor;
 }
-
-
+float Cotizacion::obtenerTotal() {
+	return this->cotizacionTotal;
+}
 string Cotizacion::toString() {
 
 	char fechaYHora[100];

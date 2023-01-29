@@ -32,7 +32,7 @@ private:
 	Tienda* tienda;
 	Vendedor* vendedor;
 	void verOpciones(const char* option, bool& exitCondition);
-	void verOpcionesCotizacion(const char* option, bool& exitCondition, int& paso);
+	void verOpcionesCotizacion(string option, bool& exitCondition, int& paso);
 	void verOpcionesHistorial(const char* option, bool& exitCondition);
 
 };
