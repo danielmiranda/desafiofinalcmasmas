@@ -32,7 +32,7 @@ public:
 
 	virtual bool _equals(IPrenda & other);
 
-	Cotizacion obtenerCotizacion(int cantidad, float precio);
+	Cotizacion obtenerCotizacion(int cantidad, float precio, int codigoVendedor);
 
 
 private:

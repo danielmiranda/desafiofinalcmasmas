@@ -51,7 +51,7 @@ void PantallaPrincipal::showCotizacion()
 		
 
 		if (paso == 40) {
-			Cotizacion cotiza = prenda->obtenerCotizacion(cantidadPrenda, precioPrenda);
+			Cotizacion cotiza = prenda->obtenerCotizacion(cantidadPrenda, precioPrenda, this->vendedor->obtenerCodigo());
 			this->tienda->agregarCotizacion(&cotiza);
 			cout << cotiza.toString();
 			cout << endl << MSG_SEPARADOR << endl;
@@ -305,7 +305,7 @@ void PantallaPrincipal::verOpciones(const char* option, bool& exitCondition)
 	}
 	else
 	{
-		cout << "OPCION INVALIDA: PRESIONE ENTER PARA CNOTINUAR";
+		cout << "OPCION INVALIDA - Presione ENTER para continuar ";
 		std::cin.get();
 		exitCondition = false;
 	}
@@ -324,7 +324,7 @@ void PantallaPrincipal::verOpcionesCotizacion(string str_option, bool& exitCondi
 	}
 	else
 	{
-		cout << "OPCION INVALIDA: PRESIONE ENTER PARA CNOTINUAR";
+		cout << "OPCION INVALIDA: Presiones ENTER para continuar";
 		std::cin.get();
 		exitCondition = false;
 	}
@@ -340,7 +340,7 @@ void PantallaPrincipal::verOpcionesHistorial(const char* option, bool& exitCondi
 	}
 	else
 	{
-		cout << "OPCION INVALIDA: PRESIONE ENTER PARA CNOTINUAR";
+		cout << "OPCION INVALIDA: Presione ENTER para continuar";
 		std::cin.get();
 		exitCondition = false;
 	}
