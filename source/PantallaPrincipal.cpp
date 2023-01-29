@@ -1,8 +1,6 @@
 ﻿#include "PantallaPrincipal.h"
 
 
-
-
 void PantallaPrincipal::show()
 {
 	std::string option;
@@ -72,10 +70,23 @@ void PantallaPrincipal::showCotizacion()
 			cout << "INFORMACION:" << endl;
 			cout << "Existe " << cantidadStock << " unidades en stock de la prenda seleccionada" << endl << endl;
 			cout << "Paso 5: Ingrese la cantidad de prendas a cotiza:" << endl;
+			
+			if (cantidadPrenda > cantidadStock ) {
+				cout << endl << "ALERTA: No contamos con stock suficienta para completar la cotizacion! " << endl;
+			}
+			if (cantidadPrenda < 0) {
+				cout << endl << "ALERTA: Debe completar la cantidad de prendas para realizar la cotizacion! " << endl;
+			}
 			cout << "CANTIDAD: ";
+
 			cin >> cantidadPrenda;
 
-			paso = 40;
+			if (cantidadPrenda < cantidadStock && cantidadPrenda > 0) {
+			
+				paso = 40;
+			}
+
+			
 		}
 
 		if (paso == 20) {
