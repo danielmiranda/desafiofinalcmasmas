@@ -1,6 +1,9 @@
 #include "Camisa.h"
 
 
+Camisa::Camisa() {
+}
+
 Camisa::Camisa(IPrenda::ECalidad calidad, Camisa::ETipoCuello tipoCuello, Camisa::ETipoManga tipoManga) {
 	//this->prendaPrecio = precio;
 	this->prendaCalidad = calidad;

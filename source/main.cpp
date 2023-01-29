@@ -5,6 +5,8 @@
 #include "Pantalon.h"
 #include "Stock.h"
 #include "PantallaPrincipal.h"
+#include "PantallaHistorial.h"
+
 #include "Cotizacion.h"
 
 using namespace std;
@@ -102,22 +104,16 @@ int main()
 
     cout << "Cantidad: " + std::to_string(cantidadPantalonChupinPremium) << endl;
 
-    float cotizacion = pantalon->calcularCotizacion(1, 100);
+    //float cotizacion = pantalon->calcularCotizacion(1, 100);
 
-    cout << "Cotizacion: " + std::to_string(cotizacion) << endl;
-
-
-
-
-    //(*pantalon == *pantalon_premium_chupin) ? printf("PANTALONES IGUALES") : printf("PANTALONES DISTINTOS");
-
-    // cout << camisa_standard_mao_mangacorta.CaracteristicaToString(camisa_standard_mao_mangacorta.camisaCuello) << endl;
-    //cout << camisa_standard_mao_mangacorta.CaracteristicaToString(camisa_standard_mao_mangacorta.camisaManga) << endl;
+    //cout << "Cotizacion: " + std::to_string(cotizacion) << endl;
 
     PantallaPrincipal* pantalla = new PantallaPrincipal();
-    //pantalla->setTienda(tienda_lunar);
     pantalla->setVendedor(vendedor_selenita);
-    pantalla->show();
+    pantalla->setTienda(tienda_lunar);
+    //pantalla->show();
+
+
 
     //cout << "Cotizacion: " + std::to_string(cotizacion) << endl;
     /*
@@ -130,12 +126,17 @@ int main()
     Cotizacion cotiza = pantalon->obtenerCotizacion(1, 100);
     Cotizacion cotiza1 = pantalon->obtenerCotizacion(12, 30);
 
-    
-    cout << "Cotizacion: " + cotiza.toString("VENDEDOR") << endl;
-    cout << "Cotizacion: " + cotiza1.toString("VENDEDOR") << endl;
+    tienda_lunar->agregarCotizacion(&cotiza);
+    tienda_lunar->agregarCotizacion(&cotiza1);
+
+
+    string o = tienda_lunar->listarCotizaciones();
+    pantalla->show();
 
 
 
+    //cout << "Cotizacion: " + cotiza.toString() << endl;
+    //cout << "Cotizacion: " + cotiza1.toString() << endl;
 
     return 0;
 }

@@ -27,7 +27,8 @@ float IPrenda::calcularCotizacion(int cantidad, float precio) {
 */
 Cotizacion IPrenda::obtenerCotizacion(int cantidad, float precio) {
     float total = this->calcularCotizacion(cantidad, precio);
-    Cotizacion cotiza = Cotizacion("Prenda Detalle", 1, 11, 1);
+    string prendaDetalle = this->toString();
+    Cotizacion cotiza = Cotizacion(prendaDetalle, cantidad, total, precio, "VENDEDOR 001");
     //Cotizacion * cotizar = new Cotizacion("Prenda Detalle", cantidad, total, precio);
 
     return cotiza;

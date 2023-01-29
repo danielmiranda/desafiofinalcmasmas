@@ -10,7 +10,7 @@
 using namespace std;
 
 //Cotizacion::Cotizacion(){}
-Cotizacion::Cotizacion(string prendaDetalle, int cantidad, float subTotal, float precio) {
+Cotizacion::Cotizacion(string prendaDetalle, int cantidad, float subTotal, float precio, string vendedor) {
 
 	int numero =  ++Tienda::cotizacionNumero;
 
@@ -21,10 +21,12 @@ Cotizacion::Cotizacion(string prendaDetalle, int cantidad, float subTotal, float
 	this->cotizacionCantidad = cantidad;
 	this->cotizacionTotal = subTotal;
 	this->cotizacionPrecio = precio;
+
+	this->cotizacionVendedor = vendedor;
 }
 
 
-string Cotizacion::toString(string vendedor) {
+string Cotizacion::toString() {
 
 	char fechaYHora[100];
 	strftime(fechaYHora, 50, "Fecha y Hora de la cotizacion: %d/%m/%Y %H:%M", localtime(&this->cotizacionFechaHora));
@@ -33,7 +35,7 @@ string Cotizacion::toString(string vendedor) {
 	output += "Numero de identificacion: " + to_string(this->cotizacionNumero) + "\n";
 	output += fechaYHora;
 	output += "\n";
-	output += "Codigo del Vendedor: " + vendedor + "\n";
+	output += "Codigo del Vendedor: " + this->cotizacionVendedor + "\n";
 	output += "Prenda cotizada: " + this->cotizacionPrendaDetalle + "\n";
 	output += "Precio unitario: $" + to_string(this->cotizacionPrecio) + "\n";
 	output += "Cantidad de unidades cotizadas: " + to_string(this->cotizacionCantidad) + "\n";

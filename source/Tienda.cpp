@@ -52,5 +52,23 @@ void Tienda::listarStock() {
 	for (auto it : this->stockList) {
 		cout << "Item: " << it->toString() << endl;
 	}
-	
+}
+
+bool Tienda::agregarCotizacion(Cotizacion* itemCotizacion) {
+	this->cotizacionList.push_back(itemCotizacion);
+	return true;
+}
+
+string Tienda::listarCotizaciones() {
+
+	string output = "";
+
+	cout << "HISTORIAL DE COTIZACIONES: " << endl;
+
+	for (auto it : this->cotizacionList) {
+		output += it->toString() + "\n";
+		//cout << it->toString() << endl;
+	}
+
+	return output;
 }

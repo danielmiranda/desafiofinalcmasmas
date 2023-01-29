@@ -9,8 +9,8 @@ class Cotizacion
 {
 public:
 	//Cotizacion();
-	Cotizacion(string prendaDetalle, int cantidad, float subTotal, float precio);
-	string toString(string vendedor);
+	Cotizacion(string prendaDetalle, int cantidad, float subTotal, float precio, string vendedor);
+	string toString();
 
 private:
 	int cotizacionNumero;
@@ -19,6 +19,7 @@ private:
 	int cotizacionCantidad;
 	float cotizacionTotal;
 	float cotizacionPrecio;
+	string cotizacionVendedor;
 
 };
 

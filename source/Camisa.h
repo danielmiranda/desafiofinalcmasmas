@@ -21,7 +21,7 @@ public:
 	string prendaCodigo = "CAMISA";
 
 	Camisa(IPrenda::ECalidad calidad, Camisa::ETipoCuello tipoCuello, Camisa::ETipoManga tipoManga);
-
+	Camisa();
 	string toString();
 	string caracteristicaToString(Camisa::ETipoCuello e);
 	string caracteristicaToString(Camisa::ETipoManga e);

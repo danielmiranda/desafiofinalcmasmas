@@ -5,9 +5,7 @@ Pantalon::Pantalon(IPrenda::ECalidad calidad, Pantalon::ETipoPantalon tipoPantal
 	this->pantalonTipo = tipoPantalon;
 }
 
-Pantalon::Pantalon() {
-    
-}
+Pantalon::Pantalon() {}
 
 string Pantalon::toString() {
     return this->prendaCodigo + ": " + this->caracteristicaToString(this->prendaCalidad) + ", " + this->caracteristicaToString(this->pantalonTipo);
